@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager thisManager = null;  
-    [SerializeField] private Text Txt_Score = null;
+    [SerializeField] public Text Txt_Score = null;
     [SerializeField] private Text Txt_Message = null;
     private int Score = 0;
 
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     {
         Score += value;
         Txt_Score.text = "SCORE : " + Score;
+        print("score");
     }
 
     private void StartGame()
